@@ -72,14 +72,14 @@ export class HistoryManager {
     const subText = `${isNabung ? "Nabung" : "Keluar"} - ${tglFormatted}`;
 
     const iconBg = isNabung ? "bg-green-600" : "bg-red-600";
-    const icon = isNabung ? "➕" : "➖";
+    const icon = isNabung ? "+" : "-";
     const amountClass = isNabung ? "text-green-400" : "text-red-400";
     const amountSign = isNabung ? "+" : "-";
 
     return `
           <div class="bg-gray-700 rounded-lg p-4 flex items-center space-x-4">
               <div class="flex-shrink-0 w-10 h-10 rounded-full ${iconBg} flex items-center justify-center">
-                  <span class="text-white font-bold text-lg">${icon}</span>
+                  <span class="font-bold text-3xl text-white transform -translate-y-[2px]">${icon}</span>
               </div>
               <div class="flex-grow overflow-hidden mr-2">
                   <p class="font-medium text-white truncate">${catatan}</p>
